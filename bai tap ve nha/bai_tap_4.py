@@ -7,6 +7,6 @@ if t > 0 :
     E = (P * t) / (1000 * 3600)
     # Tính tiền điện phải trả
     tien_dien = E * gia_tien_dien
-    print(f"TIỀN ĐIỆN LÀ: {tien_dien:2f} ")
+    print(f"TIỀN ĐIỆN CỦA LÀ: {tien_dien:2f} ")
 else :
-    print("ỦA THỜI GIAN KHÔNG THỂ ÂM ")
+    print("THỜI GIAN KHONG AM ")
