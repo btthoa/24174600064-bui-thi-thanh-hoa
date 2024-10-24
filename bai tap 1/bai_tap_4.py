@@ -1,17 +1,12 @@
-def tinh_tien_dien(dien_ap, dong_dien, thoi_gian, gia_tien_kwh):
-    cong_suat = dien_ap * dong_dien  # Công suất (W)
-    tieu_thu_nang_luong_kwh = ( cong_suat* thoi_gian) / 3600000  # Chuyển đổi sang kWh
-    chi_phi = tieu_thu_nang_luong_kwh * gia_tien_kwh # Tính tiền điện
-    return round(chi_phi, 2)
-
-# Thông tin đã cho
-dien_ap = 220  # V
-dong_dien = 2.7  # A
-gia_tien_kwh = 7000  # đ/kWh
-
-# Nhập thời gian sử dụng bóng đèn từ người dùng
-thoi_gian = float(input("Nhập thời gian sử dụng bóng đèn (giây): "))
-
-# Tính toán tiền điện
-result = tinh_tien_dien(dien_ap, dong_dien, thoi_gian, gia_tien_kwh)
-print(f"Tiền điện phải trả là: {result} đ")
+import math
+gia_tien_dien = 7000
+t = float(input("Thời gian sử dụng điện là: "))
+if t > 0 :
+    P = U * I
+    # Tính năng lượng tiêu thụ (kWh)
+    E = (P * t) / (1000 * 3600)
+    # Tính tiền điện phải trả
+    tien_dien = E * gia_tien_dien
+    print(f"TIỀN ĐIỆN LÀ: {tien_dien:2f} ")
+else :
+    print("ỦA THỜI GIAN KHÔNG THỂ ÂM ")
